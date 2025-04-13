@@ -7888,7 +7888,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -9195,6 +9195,7 @@ MonoBehaviour:
   _pauseScreen: {fileID: 617725227}
   _endGameScreen: {fileID: 1829083999}
   _playerNameText: {fileID: 1143928263}
+  victoryAudio: {fileID: 0}
 --- !u!1001 &1889343029
 PrefabInstance:
   m_ObjectHideFlags: 0
