@@ -2166,6 +2166,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 310473395}
     m_Modifications:
+    - target: {fileID: 2753300733669711170, guid: cd675f71594904db1ba3ea2af4816ecb, type: 3}
+      propertyPath: _bounceSpeed
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2753300733669711170, guid: cd675f71594904db1ba3ea2af4816ecb, type: 3}
+      propertyPath: _gravityScale
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2753300733669711170, guid: cd675f71594904db1ba3ea2af4816ecb, type: 3}
+      propertyPath: _movementSpeed
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2922534226230584652, guid: cd675f71594904db1ba3ea2af4816ecb, type: 3}
       propertyPath: m_Name
       value: Arrow Player (Player 2)
