@@ -40,8 +40,6 @@ public class DayNightSwitch : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Debug.Log("Is paused : " + GameStateManager.IsPaused);
-
         if (GameStateManager.IsPaused)
             return;
 
