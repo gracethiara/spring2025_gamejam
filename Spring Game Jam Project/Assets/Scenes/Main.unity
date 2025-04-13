@@ -1177,9 +1177,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _cooldownTime: 0
-  _cooldownText: {fileID: 0}
-  _leftMap: {fileID: 0}
-  _rightMap: {fileID: 0}
+  _cooldownText: {fileID: 1856835308}
+  _leftMap: {fileID: 410047282}
+  _rightMap: {fileID: 1895728986}
   _leftBkgImg: {fileID: 813933146}
   _rightBkgImg: {fileID: 1472886344}
   _switchKey: 32
