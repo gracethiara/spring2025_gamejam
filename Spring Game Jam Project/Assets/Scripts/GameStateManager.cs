@@ -22,6 +22,7 @@ public class GameStateManager : MonoBehaviour
     [Header("End Screen")]
     [SerializeField] private Transform _endGameScreen;
     [SerializeField] private TMP_Text _playerNameText;
+    [SerializeField] private AudioSource victoryAudio;
 
     private bool _hasFinishedGame = false;
     private float _countdown = 0;
@@ -101,5 +102,7 @@ public class GameStateManager : MonoBehaviour
         string v_playerName = p_winningPlayer.GetPlayerName();
         _playerNameText.text = v_playerName;
         _endGameScreen.gameObject.SetActive(true);
+
+        victoryAudio.Play();
     }
 }
