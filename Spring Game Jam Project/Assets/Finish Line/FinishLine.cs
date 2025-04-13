@@ -9,7 +9,7 @@ public class FinishLine : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Player"))
         {
-            PlayerInfo v_winningPlayer = collision.transform.parent.gameObject.GetComponent<PlayerInfo>();
+            PlayerInfo v_winningPlayer = collision.gameObject.GetComponent<PlayerInfo>();
             GameStateManager.OnReachFinishLine(v_winningPlayer);
         }
     }
