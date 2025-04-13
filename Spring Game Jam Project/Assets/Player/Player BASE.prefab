@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8329760979406814110}
   - component: {fileID: 4735435274152870137}
+  - component: {fileID: 6337337005087513502}
   m_Layer: 0
   m_Name: Player BASE
   m_TagString: Untagged
@@ -49,6 +50,19 @@ MonoBehaviour:
   _movementSpeed: 5
   _rightMoveKey: 0
   _leftMoveKey: 0
+--- !u!114 &6337337005087513502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6559097394528004478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b753c803226f64cafa7ea2349e2d5452, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerName: Player #
 --- !u!1 &7485978669334174572
 GameObject:
   m_ObjectHideFlags: 0
@@ -63,7 +77,7 @@ GameObject:
   - component: {fileID: 4266416651682678692}
   m_Layer: 0
   m_Name: Player Sprite
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

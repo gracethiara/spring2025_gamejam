@@ -16,9 +16,13 @@ PrefabInstance:
       propertyPath: _rightMoveKey
       value: 275
       objectReference: {fileID: 0}
+    - target: {fileID: 6337337005087513502, guid: 70e7c29ec7e954c4abd3c8edc707cd26, type: 3}
+      propertyPath: _playerName
+      value: Vi
+      objectReference: {fileID: 0}
     - target: {fileID: 6559097394528004478, guid: 70e7c29ec7e954c4abd3c8edc707cd26, type: 3}
       propertyPath: m_Name
-      value: Arrow Player Variant
+      value: Arrow Player (Player 2)
       objectReference: {fileID: 0}
     - target: {fileID: 8327168784937448705, guid: 70e7c29ec7e954c4abd3c8edc707cd26, type: 3}
       propertyPath: m_Color.b

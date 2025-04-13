@@ -12,7 +12,6 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-
         if (Input.GetKeyDown(_rightMoveKey))
             _horizontalDirection = 1;
         else if (Input.GetKeyDown(_leftMoveKey))
@@ -24,7 +23,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        _rb.velocity = new Vector2(_horizontalDirection * _movementSpeed, _rb.velocity.y);
+        if(GameStateManager.IsPlayingGame)
+            _rb.velocity = new Vector2(_horizontalDirection * _movementSpeed, _rb.velocity.y);
     }
 
     //private void Flip()

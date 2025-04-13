@@ -16,9 +16,13 @@ PrefabInstance:
       propertyPath: _rightMoveKey
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 6337337005087513502, guid: 70e7c29ec7e954c4abd3c8edc707cd26, type: 3}
+      propertyPath: _playerName
+      value: Caitlyn
+      objectReference: {fileID: 0}
     - target: {fileID: 6559097394528004478, guid: 70e7c29ec7e954c4abd3c8edc707cd26, type: 3}
       propertyPath: m_Name
-      value: AD Player Variant
+      value: AD Player (Player 1)
       objectReference: {fileID: 0}
     - target: {fileID: 8327168784937448705, guid: 70e7c29ec7e954c4abd3c8edc707cd26, type: 3}
       propertyPath: m_Color.b
