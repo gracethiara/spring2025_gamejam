@@ -4,13 +4,16 @@ using TMPro;
 
 public class DayNightSwitch : MonoBehaviour
 {
-    [SerializeField] private float _cooldownTime;
-    [SerializeField] private TMP_Text _cooldownText;
+    [Header("Map")]
     [SerializeField] private Transform _leftMap;
     [SerializeField] private Transform _rightMap;
     [SerializeField] private Image _leftBkgImg;
     [SerializeField] private Image _rightBkgImg;
     [SerializeField] private KeyCode _switchKey;
+
+    [Header("Cooldown")]
+    [SerializeField] private float _cooldownTime;
+    [SerializeField] private TMP_Text _cooldownText;
 
     private float _currentTime = 0;
 
@@ -26,34 +29,39 @@ public class DayNightSwitch : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(_switchKey) && _currentTime <= 0)
+        if (Input.GetKeyDown(_switchKey) && _currentTime <= 1 && !GameStateManager.IsPaused)
         {
             SwapXScale(_rightMap);
             SwapXScale(_leftMap);
             SwapBkg();
-            SetCurrentTime(_cooldownTime);
+            _currentTime = _cooldownTime;
         }
     }
 
     private void FixedUpdate()
     {
-        if(_currentTime == _cooldownTime)
+        Debug.Log("Is paused : " + GameStateManager.IsPaused);
+
+        if (GameStateManager.IsPaused)
+            return;
+
+        if (_currentTime == _cooldownTime)
+        {
             _cooldownText.gameObject.SetActive(true);
+            _cooldownText.text = ((int)_currentTime).ToString();
+            _currentTime += 1;
+        }
 
-        if (_currentTime > 0)
-            SetCurrentTime(_currentTime - Time.deltaTime);
+        else if (_currentTime > 1)
+            _cooldownText.text = ((int)_currentTime).ToString();
 
-        else if (_currentTime < 0)
+        else if (_currentTime < 1)
         {
             _cooldownText.gameObject.SetActive(false);
-            SetCurrentTime(0);
+            return;
         }
-    }
 
-    private void SetCurrentTime(float p_time)
-    {
-        _currentTime = p_time;
-        _cooldownText.text = ((int)_currentTime).ToString();
+        _currentTime -= Time.deltaTime;
     }
 
     private void SwapBkg()
