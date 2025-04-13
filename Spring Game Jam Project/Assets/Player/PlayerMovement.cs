@@ -5,18 +5,18 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Rigidbody2D _rb;
     [SerializeField] private float _movementSpeed = 10f;
     [SerializeField] private float _bounceSpeed = 1f;
-    [SerializeField] private KeyCode _rightMoveKey;
     [SerializeField] private KeyCode _leftMoveKey;
+    [SerializeField] private KeyCode _rightMoveKey;
 
     private float _horizontalDirection;
     private bool _isFacingRight = true;
 
     void Update()
     {
-        if (Input.GetKeyDown(_rightMoveKey))
-            _horizontalDirection = 1;
-        else if (Input.GetKeyDown(_leftMoveKey))
+        if (Input.GetKeyDown(_leftMoveKey))
             _horizontalDirection = -1;
+        else if (Input.GetKeyDown(_rightMoveKey))
+            _horizontalDirection = 1;
 
         //Flip();
     }

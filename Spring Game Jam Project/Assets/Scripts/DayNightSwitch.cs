@@ -1,9 +1,13 @@
+using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DayNightSwitch : MonoBehaviour
 {
-    [SerializeField] private Transform _rightMap;
     [SerializeField] private Transform _leftMap;
+    [SerializeField] private Transform _rightMap;
+    [SerializeField] private Image _leftBkgImg;
+    [SerializeField] private Image _rightBkgImg;
     [SerializeField] private KeyCode _switchKey;
 
     private Vector3 _positiveScale;
@@ -21,7 +25,17 @@ public class DayNightSwitch : MonoBehaviour
         {
             SwapXScale(_rightMap);
             SwapXScale(_leftMap);
+            SwapBkg();
         }
+    }
+
+    private void SwapBkg()
+    {
+        Sprite v_rightBkgSprite = _rightBkgImg.sprite;
+        Sprite v_leftBkgSprite = _leftBkgImg.sprite;
+
+        _rightBkgImg.sprite = v_leftBkgSprite;
+        _leftBkgImg.sprite = v_rightBkgSprite;
     }
 
     private void SwapXScale(Transform p_targetTransform)
