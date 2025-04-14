@@ -11,7 +11,6 @@ public class PlayerMovement : MonoBehaviour
 
     private float _horizontalDirection;
     private Vector2 _pausedVelocity;
-    private bool _isFacingRight = true;
 
     private void Awake()
     {
@@ -68,15 +67,4 @@ public class PlayerMovement : MonoBehaviour
         _rb.gravityScale = v_targetGravityScale;
         _rb.velocity = v_targetVelocity;
     }
-
-    //private void Flip()
-    //{
-    //    if (_isFacingRight && _horizontalDirection < 0f || !_isFacingRight && _horizontalDirection > 0f)
-    //    {
-    //        _isFacingRight = !_isFacingRight;
-    //        Vector3 localScale = transform.localScale;
-    //        localScale.x *= -1f;
-    //        transform.localScale = localScale;
-    //    }
-    //}
 }

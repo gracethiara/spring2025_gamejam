@@ -16,7 +16,7 @@ public class GameStateManager : MonoBehaviour
     [SerializeField] private TMP_Text _startingCountdownText;
 
     [Header("Pause Menu")]
-    [SerializeField] private KeyCode _pauseMenuKey;
+    [SerializeField] private KeyCode _pauseMenuKey = KeyCode.Escape;
     [SerializeField] private Transform _pauseScreen;
 
     [Header("End Screen")]
@@ -25,7 +25,7 @@ public class GameStateManager : MonoBehaviour
     [SerializeField] private AudioSource victoryAudio;
 
     private bool _hasFinishedGame = false;
-    private float _countdown = 0;
+    private float _countdown = -3;
 
     private void Awake()
     {
@@ -33,7 +33,10 @@ public class GameStateManager : MonoBehaviour
 
         _endGameScreen.gameObject.SetActive(false);
         _pauseScreen.gameObject.SetActive(false);
+    }
 
+    private void Start()
+    {
         _countdown = _startingCountdownTime;
         TogglePause();
     }

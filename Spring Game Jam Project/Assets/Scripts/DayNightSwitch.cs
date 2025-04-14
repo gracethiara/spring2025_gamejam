@@ -9,7 +9,7 @@ public class DayNightSwitch : MonoBehaviour
     [SerializeField] private Transform _rightMap;
     [SerializeField] private Image _leftBkgImg;
     [SerializeField] private Image _rightBkgImg;
-    [SerializeField] private KeyCode _switchKey;
+    [SerializeField] private KeyCode _switchKey = KeyCode.Space;
 
     [Header("Cooldown")]
     [SerializeField] private float _cooldownTime;
